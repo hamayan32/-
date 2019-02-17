@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>素数判定プログラム</title>
+  </head>
+  <body>
+    <h1>素数判定プログラム</h1>
+    ◆説明◆<br>
+    ボックス内に数字を入力してください。<br>
+    入力された数字が素数かを判定します。
+
+<script >
+
+  function prime(){
+  var n=document.getElementById("num").value;
+
+
+  if(n==2){
+  alert(n+"は素数です");
+  }
+  else{
+  if((n<2)|| (n>100)){
+  alert(n+"は入力できません");
+  }
+  else{
+  var k=0;
+  for(var i=2;(k==0)&&(n>i);i++){
+  var j=n%i;
+  if(j==0){
+  alert(n+"は素数ではありません");
+  k=1;
+  }
+  }
+  if(k==0){
+  alert(n+"は素数です")
+  }
+  }}
+  }
+</script>
+
+<p>
+<input type="text" id="num">
+<input type="button" onclick="prime()" value="クリック">
+  </body>
+</html>
